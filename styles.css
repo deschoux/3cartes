@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  min-height: 1080px;
+  display: flex;
+  flex-direction: column; /* Permet au footer de se placer en bas */
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px; /* Ajouter un peu de padding */
+  margin-bottom: 20px; /* Espace entre le header et le contenu */
+  position: relative;
+}
+
+.logo-image {
+  width: 320px; /* Vous pouvez ajuster cette valeur pour changer la largeur du logo */
+}
+
+.header-image {
+  max-width: 100%; /* Empêche l'image de déborder */
+  width: 600px; /* Vous pouvez ajuster cette valeur pour changer la largeur */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Changer de colonne à ligne */
+  flex-wrap: wrap; /* Pour permettre aux cartes de s'empiler si nécessaire */
+  gap: 20px; /* Ajouter un espace entre les cartes */
+}
+
+.card {
+  transform-style: preserve-3d;
+  min-height: 700px;
+  width: 580px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 0px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.imgBox {
+  min-height: 378px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.imgBox img {
+  z-index: 1;
+}
+
+/* Ajoutez des tailles spécifiques pour chaque image */
+.google {
+  width: 260px;
+}
+
+.google2 {
+  width: 300px;
+}
+
+.google3 {
+  width: 220px;
+}
+
+.imgBox .circle {
+  width: 240px;
+  height: 240px;
+  background: linear-gradient(to right, #000, #be9f67);
+  position: absolute;
+  top: 50%; /* Centre verticalement */
+  left: 50%; /* Centre horizontalement */
+  transform: translate(-50%, -50%); /* Décale pour centrer parfaitement */
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.infoBox {
+  text-align: center;
+  margin-top: 2px;
+}
+
+.infoBox h1 {
+  font-size: 35.2px;
+  transition: all 0.5s ease-out;
+}
+
+.infoBox h3 {
+  font-size: 1.1rem;
+  padding: 16px 0px;
+  color: #585858;
+  font-weight: lighter;
+  text-align: center;
+  transition: all 0.5s ease-out;
+  margin-bottom: 40px;
+}
+
+.sizes {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.5s ease-out;
+}
+
+.sizes button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 16px 32px;
+  height: 50px; /* Définir une hauteur fixe pour les boutons */
+  background: none;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #585858;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sizes button.active {
+  background: #000;
+  color: #fff;
+}
+
+.purchase {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  width: 100%;
+}
+
+.purchase button {
+  width: calc(
+    100% - 10px
+  ); /* Ajuster la largeur pour correspondre à la largeur des trois boutons */
+  max-width: 100%;
+  padding: 16px;
+  background: linear-gradient(to right, #000, #000, #be9f67);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+  border: none;
+  transition: all 0.5s ease-out;
+}
+
+footer {
+  margin-top: 20px; /* Ajouter de l'espace au-dessus du footer */
+  text-align: center;
+  font-size: 14px;
+  color: #585858;
+}
+
+footer a {
+  color: #be9f67;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
